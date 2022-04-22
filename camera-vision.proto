@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service CameraService {
+    rpc GetCamera(CameraRequest) returns (CameraResponse);
+}
+
+message CameraRequest {
+    string MAC = 1;
+}
+
+message CameraResponse {
+    string Info = 1;
+    string Error = 2;
+    string IPAddress = 3;
+}
